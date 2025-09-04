@@ -31,10 +31,16 @@ python src/pngs_to_pdf.py --input <input_folder> --output <output_folder> [--nam
 ### Examples
 1. Using default PDF name:
 ```bash
-python src/pngs_to_pdf.py --input ./input_folder --output ./output_folder
+python src/pngs_to_pdf.py \
+    --input ./input_folder \
+    --output ./output_folder
+```
 ```
 
 2. Using a custom PDF name:
 ```bash
-python src/pngs_to_pdf.py --input ./input_folder --output ./output_folder --name combined_screenshots.pdf
+python src/pngs_to_pdf.py \
+    --input ./input_folder \
+    --output ./output_folder \
+    --name combined_screenshots.pdf
 ```
