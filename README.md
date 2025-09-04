@@ -35,7 +35,6 @@ python src/pngs_to_pdf.py \
     --input ./input_folder \
     --output ./output_folder
 ```
-```
 
 2. Using a custom PDF name:
 ```bash
