@@ -1,3 +1,6 @@
+black
+detect-secrets
 loguru
 pillow
+pre-commit
 typer

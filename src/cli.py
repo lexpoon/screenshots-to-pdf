@@ -1,5 +1,3 @@
-from PIL import Image
-import os
 from loguru import logger
 import typer
 from pngs_to_pdf import pngs_to_pdf
