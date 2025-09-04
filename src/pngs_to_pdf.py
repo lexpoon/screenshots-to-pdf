@@ -39,18 +39,24 @@ def pngs_to_pdf(input_folder: str, output_path: str, output_filename_pdf: str):
         logger.debug(f"Opening image: {img_path}")
         img = Image.open(img_path).convert("RGB")
         images.append(img)
-    
+
     first_image, *other_images = images
 
     output_pdf = os.path.join(output_path, output_filename_pdf)
     first_image.save(output_pdf, save_all=True, append_images=other_images)
     logger.success(f"PDF created successfully: {output_pdf}")
 
+
 @app.command()
 def main(
     input: str = typer.Option(..., help="Path to the folder containing PNG files."),
-    output: str = typer.Option(..., help="Path to the folder where the PDF will be saved."),
-    name: str = typer.Option("screenshots_default_name.pdf", help="Output PDF filename (default: screenshots_default_name.pdf)."),
+    output: str = typer.Option(
+        ..., help="Path to the folder where the PDF will be saved."
+    ),
+    name: str = typer.Option(
+        "screenshots_default_name.pdf",
+        help="Output PDF filename (default: screenshots_default_name.pdf).",
+    ),
 ):
     """
     _summary_
@@ -63,6 +69,7 @@ def main(
     logger.info("Starting PNG to PDF conversion...")
     pngs_to_pdf(input, output, name)
     logger.info("Process finished.")
+
 
 if __name__ == "__main__":
     app()
