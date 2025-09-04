@@ -20,7 +20,10 @@ pip install -r requirements.txt
 
 Run the script from the terminal:
 ```bash
-python src/pngs_to_pdf.py --input <input_folder> --output <output_folder> [--name <output_pdf_name>]
+python src/pngs_to_pdf.py \
+    --input <input_folder> \
+    --output <output_folder> \
+    --name <output_pdf_name>
 ```
 
 ### Parameters
